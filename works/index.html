@@ -10,7 +10,8 @@
     <link href=/mysite/manifest.json rel=manifest crossorigin=use-credentials>
     <link href=/mysite/favicon.png rel=icon type=image/png>
     <link href=/mysite/client/main.3574464383.css rel=stylesheet> <noscript id=sapper-head-start></noscript><noscript
-        id=sapper-head-end></noscript> </head>
+        id=sapper-head-end></noscript>
+     </head>
 
 <body>
     <div id=sapper>
@@ -19,7 +20,8 @@
                 <li class=svelte-1dbd5up><a class=svelte-1dbd5up href=/mysite/index>home</a></li>
                 <li class=svelte-1dbd5up><a class=svelte-1dbd5up href=/mysite/about>about</a></li>
                 <li class=svelte-1dbd5up><a class=svelte-1dbd5up href=/mysite/blog rel=prefetch>blog</a></li>
-                <li class=svelte-1dbd5up><a class=svelte-1dbd5up href=/mysite/works rel=prefetch aria-current=page>works</a>
+                <li class=svelte-1dbd5up><a class=svelte-1dbd5up href=/mysite/works rel=prefetch
+                        aria-current=page>works</a>
                 </li>
                 <li class=svelte-1dbd5up><a class=svelte-1dbd5up href=/mysite/contact rel=prefetch>contact</a>
             </ul>
@@ -94,4 +96,32 @@
             <p>Coming Soon!
         </main>
     </div>
-    <script>__SAPPER__ = { baseUrl: "", preloaded: [void 0, {}] }; if ('serviceWorker' in navigator) navigator.serviceWorker.register('/service-worker.js'); var s = document.createElement("script"); try { new Function("if(0)import('')")(); s.src = "/client/client.74185ed2.js"; s.type = "module"; s.crossOrigin = "use-credentials"; } catch (e) { s.src = "/client/shimport@1.0.1.js"; s.setAttribute("data-main", "/client/client.74185ed2.js") } document.head.appendChild(s)</script>
+    <script>__SAPPER__ = { baseUrl: "", preloaded: [void 0, {}] }; 
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('/service-worker.js');
+     var s = document.createElement("script"); try { new Function("if(0)import('')")(); s.src = "/client/client.74185ed2.js"; s.type = "module"; s.crossOrigin = "use-credentials"; } catch (e) { s.src = "/client/shimport@1.0.1.js"; s.setAttribute("data-main", "/client/client.74185ed2.js") } document.head.appendChild(s)</script>
+     <script>
+        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+        window.onscroll = function () { scrollFunction() };
+  
+        function scrollFunction() {
+          if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("navbar").style.padding = "30px 10px";
+            document.getElementById("logo").style.fontSize = "25px";
+          } else {
+            document.getElementById("navbar").style.padding = "80px 10px";
+            document.getElementById("logo").style.fontSize = "35px";
+          }
+        }
+  
+      </script>
+  
+      <script>
+        // Tab image Gallery
+        function myFunction(imgs) {
+          var expandImg = document.getElementById("expandedImg");
+          var imgText = document.getElementById("imgtext");
+          expandImg.src = imgs.src;
+          imgText.innerHTML = imgs.alt;
+          expandImg.parentElement.style.display = "block";
+        }
+      </script>
